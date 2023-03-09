@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <title>Blog</title>
+</head>
+<body>
+    <form method="post" action="/update">
+      <input type="hidden" name="id" value="{{ .Id }}" />
+        <div class="form-group">
+          <label for="Title">Title</label>
+          <input type="text" class="form-control" name="title" value="{{ .Title }}">
+        </div>
+        <div class="form-group">
+          <label for="Content">Content</label>
+          <input type="text" class="form-control" name="content" rows="3"value="{{ .Content}}">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</body>
+</html>
